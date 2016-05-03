@@ -22,7 +22,9 @@
           
           var favoriteMovies = ["Moive1", "Movie2", "Movie3", "Movie4", "Movie5"];
           
-          
+          for(var i = 0; i < favoriteMovies.length; i++){
+              $("#favorite-movies-list").append("<li>"+favoriteMovies[i]+"</li>");
+          }
           
           // Extra Credit:
           //  1. Can you add a button to make the html fill only once the button is clicked?
