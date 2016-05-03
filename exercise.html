@@ -11,7 +11,9 @@
     <body>
         <div class='container'>
           <h1>My Top 5 Favorite Movies</h1>
-          <button id="fill-btn">Fill</button>
+          <button id="fill-btn">Fill List</button>
+          <input type="text" id="add-txt">
+          <button id="add-btn"><- Add</button>
           <ul class='list-unstyled' id="favorite-movies-list">
           </ul>
         </div>
@@ -28,7 +30,13 @@
                 $("#favorite-movies-list").append("<li>"+favoriteMovies[i]+"</li>");
               }
           });
-          
+          $("#add-btn").click(function(){
+            var input = $("#add-txt").val();
+            if(input != ''){
+                $("#favorite-movies-list").append("<li>"+input+"</li>");
+            }
+            $("#add-txt").val('');
+          });
           
           // Extra Credit:
           //  1. Can you add a button to make the html fill only once the button is clicked?
